@@ -10,10 +10,10 @@ import java.util.TimerTask;
 /**
  * 
  * @author Kevin GRILLET
- * @version 1.0
+ * @version 1.1
  * 
  */
-public class Controller extends MouseAdapter implements ActionListener, IConfig {
+class Controller extends MouseAdapter implements ActionListener, IConfig {
 	private Model model = new Model();
 	private View vue = new View(model);
 	private Timer tTime;

@@ -27,10 +27,10 @@ import javax.swing.JTextField;
 /**
  * 
  * @author Kevin GRILLET
- * @version 1.0
+ * @version 1.1
  *
  */
-public class View implements IConfig, Observer {
+class View implements IConfig, Observer {
 	private Model model;
 	private JFrame frame, fAPropos, fLoose, fRegles, fSettings, fWin;
 	private JPanel panel, pLoose, pSettings, pWin;
@@ -58,7 +58,7 @@ public class View implements IConfig, Observer {
 	View(final Model model) {
 		this.model = model;
 
-		// Préparation de l'image et de la police
+		// Preparation de l'image et de la police
 		try {
 			tiles = ImageIO.read(Minesweeper.class
 					.getResource("minesweeper_tiles.jpg"));

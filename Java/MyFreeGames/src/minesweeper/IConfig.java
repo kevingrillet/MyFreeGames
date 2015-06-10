@@ -3,9 +3,9 @@ package minesweeper;
 /**
  * 
  * @author Kevin GRILLET
- * @version 1.0
+ * @version 1.1
  *
  */
-public interface IConfig {
+interface IConfig {
 	final int SIZE = 20, MARGIN = 5, DEBUG = 0;
 }

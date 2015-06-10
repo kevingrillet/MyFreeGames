@@ -5,10 +5,10 @@ import java.util.Observable;
 /**
  * 
  * @author Kevin GRILLET
- * @version 1.0
+ * @version 1.1
  *
  */
-public class Model extends Observable implements IConfig {
+class Model extends Observable implements IConfig {
 	private int gameStatus, width, height, mines, remainingMines, t = 0,
 			values[][], status[][];
 
@@ -104,7 +104,7 @@ public class Model extends Observable implements IConfig {
 	 * @param button
 	 *            Bouton
 	 */
-	public void reveal(int cX, int cY, int button) {
+	private void reveal(int cX, int cY, int button) {
 		if (button == 1)
 			if (status[cX][cY] == 0) {
 				status[cX][cY] = 1;
@@ -134,7 +134,7 @@ public class Model extends Observable implements IConfig {
 	 * @param cY
 	 *            Case en Y
 	 */
-	public void initMines(int cX, int cY) {
+	private void initMines(int cX, int cY) {
 		if (DEBUG > 0)
 			System.out.println("InitMines: [" + cX + "," + cY + "]");
 		int nbMines = 0;
